@@ -23,8 +23,8 @@
 	<cfset var fg = "">
 	<cfset var bg = "">
 	<cfset var qrCode 	= setQRCode(arguments.data, arguments.width, arguments.height, arguments.CorrectionLevel)>
-	<cfset var fg 		= setColor(arguments.foreGroundColor)>
-	<cfset var bg 		= setColor(arguments.backGroundColor)>
+	<cfset fg 			= setColor(arguments.foreGroundColor)>
+	<cfset bg 			= setColor(arguments.backGroundColor)>
 	<cfset var imgAWT 	= createAwtImage(fg,bg)>
 	<cfset var finalimg	= ToBinaryImage(imgAWT,arguments.format)>
 	<cfreturn finalImg>
