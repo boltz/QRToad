@@ -1,0 +1,15 @@
+_derived
+_private
+_vti*
+*.scc
+*.bak
+*_BAK*
+*BAK_*
+.project
+web.xml
+_vti_inf.html
+postinfo.html
+_vti_cnf
+Web.config
+/.settings
+settings.xml
