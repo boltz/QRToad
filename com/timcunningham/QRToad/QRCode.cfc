@@ -83,7 +83,7 @@
 </cffunction>
 
 <cffunction name="ToBinaryImage" access="private">
-	<cfargument name="image" 	type="variablename"	required="true">
+	<cfargument name="image" 	type="any"	required="true">
 	<cfargument name="format" 	type="string"		required="true" hint="png,jpg,gif">
 	
 	<cfif checkExtension(arguments.format) IS false>
@@ -111,42 +111,42 @@
 
 <!--- ToolkitImage functions --->
 <cffunction name="flush" access="private">
-	<cfargument name="image" type="variablename" >
+	<cfargument name="image" type="any" >
 	<cfreturn image.flush()>
 </cffunction>
 
 <cffunction name="getBufferedImage" access="private">
-	<cfargument name="image" type="variablename" >
+	<cfargument name="image" type="any" >
 	<cfreturn image.getBufferedImage()>
 </cffunction>
 
 <cffunction name="getColorModel" access="private">
-	<cfargument name="image" type="variablename" >
+	<cfargument name="image" type="any" >
 	<cfreturn image.getColorModel()>
 </cffunction>
 
 <cffunction name="getGraphics" access="private">
-	<cfargument name="image" type="variablename" >
+	<cfargument name="image" type="any" >
 	<cfreturn image.getGraphics()>
 </cffunction>
 
 <cffunction name="getHeight" access="private">
-	<cfargument name="image" type="variablename" >
+	<cfargument name="image" type="any" >
 	<cfreturn image.getHeight()>
 </cffunction>
 
 <cffunction name="getImageRep" access="private">
-	<cfargument name="image" type="variablename" >
+	<cfargument name="image" type="any" >
 	<cfreturn image.getImageRep()>
 </cffunction>
 
 <cffunction name="getSource" access="private">
-	<cfargument name="image" type="variablename" >
+	<cfargument name="image" type="any" >
 	<cfreturn image.getSource()>
 </cffunction>
 
 <cffunction name="getWidth" access="private">
-	<cfargument name="image" type="variablename" >
+	<cfargument name="image" type="any" >
 	<cfreturn image.getWidth()>
 </cffunction>
 
