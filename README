@@ -3,49 +3,62 @@ http://itextpdf.com/download.php
 
 To install:
 
-1. Download the java code and docs from http://itextpdf.com/download.php
-2. Copy the itext jar (an optionally the itext extras jar) file to your ColdFusion server Class path. I put mine in Coldfusion9/lib/.
-3. Restart the ColdFusion Service.
-
+1. 	Download the java code and docs from http://itextpdf.com/download.php
+2. 	Copy the itext jar (an optionally the itext extras jar) file to your ColdFusion
+	server class path. I put mine in Coldfusion9/lib/.
+3. 	Restart the ColdFusion Service.
 
 To use:
 At it's simplest you only need to create the component and pass one parameter to it.
 
-<cfset qr = createObject("component","com.timcunningham.QRToad.QRCode")>
-<cfcontent reset="true" variable="#qr.getQRCode("http://cfmumbojumbo.com")#" type="image/png">
+	<cfset qr = createObject("component","com.timcunningham.QRToad.QRCode")>
+	<cfcontent reset="true" variable="#qr.getQRCode("http://cfmumbojumbo.com")#" 
+	type="image/png">
 
-This will create a QR code that is black and white 150 x 150 pixels that takes you to cfmumbojumbo.com
+This will create a QR code that is black and white 150 x 150 pixels that takes you to 
+cfmumbojumbo.com
 
-
-
-Also see the getQRtest.html example that shows how you can use this code in relation to an HTML img src=
+Also see the getQRtest.html example that shows how you can use this code in relation to 
+an HTML img src=
 
 Thanks,
 
 Tim Cunningham
 
+Acknowledgements:  Thanks to Matt Abbott, CGCFUG awesome user group manager, who gave me
+the idea to use iText and some working sample code, which I greatfully "borrowed." 
+Remember kids, if you steal from TimmyC, you stole twice!
 
-Acknowledgements:  Thanks to Matt Abbott, CGCFUG awesome user group manager, who gave me the idea to use iText and some working sample code,
-which I greatfully "borrowed." Remember kids, if you steal from TimmyC, you stole twice!
+****************************************************************************************
+*******************************   CHANGE LOG       *************************************
+****************************************************************************************
 
+04/04/2012- change arguments that refered to "variableName" to "any" so that code 
+will work with Railo 3.3
 
-********************************************************************************************************************************
-******************************* Licensed under the MIT – No Bob Saget Open Source License ***************************************
-**************************************** Copyright (c) 2012 Timothy Cunningham   ***********************************************
-********************************************************************************************************************************
-Permission is hereby granted, free of charge, to any person (except for Bob Saget) obtaining a copy of this software 			
-and associated documentation files (the “Software”), to deal in the Software without restriction, including without 			
-limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software,			
- and to permit persons to whom the Software is furnished to do so, subject to the following conditions:							
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.	
-Under no circumstances shall Bob Saget be granted use of this software, source code, documentation or other related material.	
- Persons dealing in the Software agree not to knowingly distribute these materials or any derivative works to Bob Saget.		
- 																																
-THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO 				
-THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 										
-IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER 				
-IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE 							
-OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. 																					
-********************************************************************************************************************************
-********************************************************************************************************************************
-********************************************************************************************************************************
+****************************************************************************************
+****************************************************************************************
+********* Licensed under the MIT – No Bob Saget Open Source License ********************
+***************** Copyright (c) 2012 Timothy Cunningham   ******************************
+****************************************************************************************
+Permission is hereby granted, free of charge, to any person (except for Bob Saget) 
+obtaining a copy of this software and associated documentation files (the “Software”), 
+to deal in the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the 
+Software, and to permit persons to whom the Software is furnished to do so, subject to
+the following conditions: The above copyright notice and this permission notice shall 
+be included in all copies or substantial portions of the Software. Under no 
+circumstances shall Bob Saget be granted use of this software, source code, 
+documentation or other related material. Persons dealing in the Software agree not
+to knowingly distribute these materials or any derivative works to Bob Saget.		
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A 
+PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
+OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+****************************************************************************************
+****************************************************************************************
+****************************************************************************************
+****************************************************************************************
