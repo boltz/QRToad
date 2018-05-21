@@ -1,5 +1,5 @@
 ﻿<cfcomponent hint=	"Utilizes QR barcode functions of the latest versions of itext. 
-					Download the latest version from http://itextpdf.com 
+					Download the latest version from https://github.com/itext/itextpdf/releases 
 					put the itext JAR in your ColdFusion class path. 
 					Restart ColdFusion service">
 <cfset QR = createObject("java","com.itextpdf.text.pdf.BarcodeQRCode")>
