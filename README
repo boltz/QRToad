@@ -3,10 +3,12 @@ http://itextpdf.com/download.php
 
 To install:
 
-1. 	Download the java code and docs from http://itextpdf.com/download.php
-2. 	Copy the itext jar (an optionally the itext extras jar) file to your ColdFusion
-	server class path. I put mine in Coldfusion9/lib/.
-3. 	Restart the ColdFusion Service.
+1. 	Download the latest release .zip from https://github.com/itext/itextpdf/releases 
+2. 	Copy the itext jar (itext5-itextpdf-5.5.12.jar) (and optionally the itext extras jar) 
+        file to your ColdFusion server class path. I put mine in Coldfusion9/lib/. On Lucee
+	consider using an Application.cfc specific directory via this.javaSettings
+3. 	Restart the ColdFusion Service. On Lucee this is not required if this.javaSettings contains
+        'reloadOnChange'
 
 To use:
 At it's simplest you only need to create the component and pass one parameter to it.
