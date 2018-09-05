@@ -1,4 +1,4 @@
-﻿<cfcomponent hint=	"Utilizes QR barcode functions of the latest versions of itext. 
+<cfcomponent hint=	"Utilizes QR barcode functions of the latest versions of itext. 
 					Download the latest version from https://github.com/itext/itextpdf/releases 
 					put the itext JAR in your ColdFusion class path. 
 					Restart ColdFusion service">
@@ -16,9 +16,9 @@
 	<cfargument name="width" 			type="numeric" 	required="true" default="150" 				hint="pixel width of the QR Code"/> 
 	<cfargument name="height" 			type="numeric" 	required="true" default="150" 				hint="pixel height of the QR Code"/> 	
 	<cfargument name="format" 			type="string"	required="true" default="png"				hint="png,jpg,gif">
-	<cfargument name="foreGroundColor"	type="string"	rquired="true"	default="0,0,0,255"			hint="list with  R,B,G,Alpha settings or a color constant" >
-	<cfargument name="backGroundColor"	type="string"	rquired="true"	default="255,255,255,255"	hint="list with  R,B,G,Alpha settings or a color constant" >
-	<cfargument name="CorrectionLevel"	type="any"		required="true" default=""					hint="TBD">
+	<cfargument name="foreGroundColor"	type="string"	required="true"	default="0,0,0,255"			hint="list with  R,B,G,Alpha settings or a color constant" >
+	<cfargument name="backGroundColor"	type="string"	required="true"	default="255,255,255,255"	hint="list with  R,B,G,Alpha settings or a color constant" >
+	<cfargument name="CorrectionLevel"	type="string"	required="true" default="L"					hint="L,M,Q,H">
 	
 	<cfset var fg = "">
 	<cfset var bg = "">
@@ -76,9 +76,11 @@
 	<cfargument name="data" 			type="string" 	required="true" 					hint="This is the string you want to encode to QR code"/>
 	<cfargument name="width" 			type="numeric" 	required="true" 	default="100" 	hint="pixel width of the QR Code"/> 
 	<cfargument name="height" 			type="numeric" 	required="true" 	default="100" 	hint="pixel height of the QR Code"/> 
-	<cfargument name="errorCorrection"	type="any"		required="true" 	default=""		hint="TBD">
+	<cfargument name="errorCorrection"	type="any"		required="true" 	default="L"		hint="L,M,Q,H">
+	<cfset EncodeHintType = structNew()>
+	<cfset EncodeHintType.ERROR_CORRECTION = JavaCast("string" ,arguments.errorCorrection)>
 	
-	<cfset QR = QR.init(arguments.data,arguments.width,arguments.height,JavaCast('null',''))>
+	<cfset QR = QR.init(arguments.data,arguments.width,arguments.height,EncodeHintType)>
 	<cfreturn QR>
 </cffunction>
 
