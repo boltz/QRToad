@@ -34,6 +34,7 @@ gave me the idea to use iText and some working sample code, which I greatfully
 **************************************************************************************
 *******************************   CHANGE LOG       ***********************************
 **************************************************************************************
+09/05/2018 - implement correction level. pass CorrectionLevel=L,M,Q,orH
 
 04/04/2012- change arguments that refered to "variableName" to "any" so that code 
 will work with Railo 3.3
